@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
+      <body className="flex flex-col bg-gray-100 text-customGray min-h-screen">
         <SideMenu />
         {children}
       </body>
