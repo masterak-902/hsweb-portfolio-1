@@ -1,17 +1,27 @@
+'use client';
+
+import Link from 'next/link';
 import styles from './index.module.css';
 
-export default function SideMenu() {
-    return (
+type Props = {
+    open: boolean;
+    onCancel: () => void;
+}
+
+export default function SideMenu({onCancel, open}:Props) {
+    return open ?(
         <>
-            <p className={styles.listLogo}>LOGO.</p>
-            <ul>
-                <li className={styles.listStyle}>HOME</li>
-                <li className={styles.listStyle}>1.</li>
-                <li className={styles.listStyle}>2.</li>
-                <li className={styles.listStyle}>3.</li>
-                <li className={styles.listStyle}>4.</li>
-                <li className={styles.listStyle}>5.</li>
-            </ul>
+            <div className=''>
+                <p className={styles.listLogo}>LOGO.</p>
+                <ul>
+                    <li className={styles.listStyle}><Link href="/">01. HOME</Link></li>
+                    <li className={styles.listStyle}><Link href="/">02. NEWS</Link></li>
+                    <li className={styles.listStyle}><Link href="/">03. COMPANY</Link></li>
+                    <li className={styles.listStyle}><Link href="/">04. RECRUIT</Link></li>
+                    <li className={styles.listStyle}><Link href="/">05. LOGIN</Link></li>
+                </ul>
+            </div>
+            <div onClick={ onCancel } className="fixed bg-black bg-opacity-50 w-full h-full top-0 left-0 z-10"/>
         </>
-    );
+    ):(<></>);
 };

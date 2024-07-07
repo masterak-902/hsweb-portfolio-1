@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SideMenu from "@/components/SideMenu";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="flex flex-col bg-gray-100 text-customGray min-h-screen">
-        <SideMenu />
+        <Header />
         {children}
       </body>
     </html>
