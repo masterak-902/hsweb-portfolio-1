@@ -21,7 +21,6 @@ export default function SideMenu({onCancel, open}:Props) {
                     <li className={styles.listStyle}><Link href="/">05. LOGIN</Link></li>
                 </ul>
             </div>
-            <div onClick={ onCancel } className="fixed bg-black bg-opacity-50 w-full h-full top-0 left-0 z-10"/>
         </>
     ):(<></>);
 };

@@ -5,14 +5,16 @@ import SideMenu from '../SideMenu';
 
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const toggle = () => setIsOpen((prev) => !prev);
     return (
         <>
-            <header>
+            <header className=''>
                 <h1>HEADER GSAP</h1>
-                <SideMenu open={isOpen} onCancel={() => setIsOpen(false)} />
+                <button onClick={toggle}>{isOpen ? "CLOSE" : "MENU"}</button>
             </header>
+
+            <SideMenu open={isOpen} onCancel={() => setIsOpen(false)} />
         </>
     );
 };
