@@ -4,7 +4,7 @@ import styles from './index.module.css';
 export default function Footer() {
     return (
         <>
-            <div className='w-full bg-gray-200'>
+            <div className='w-full bg-white'>
                 <div className='w-[1024px] mx-auto'>
                     <p className='text-2xl italic font-bold text-center tracking-wider py-8'>FOOTER INFORMATION</p>
                     <ul className='flex justify-around mb-8'>

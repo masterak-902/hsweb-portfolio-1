@@ -9,11 +9,14 @@ export default function Header() {
     const toggle = () => setIsOpen((prev) => !prev);
     return (
         <>
-            <header className='w-full h-24 flex justify-between items-center px-8 mb-8'>
-                <h1 className='text-2xl tracking-wider'>HEADER</h1>
-                <button className='text-xl tracking-wider' onClick={toggle}>{isOpen ? "CLOSE" : "MENU"}</button>
+            <header className='fixed z-50 w-full bg-white'>
+                <section className='w-full h-24 flex justify-between items-center px-16'>
+                    <h1 className='text-2xl tracking-wider'>HEADER</h1>
+                    <p className='text-xl italic'>This page is not responsive.</p>
+                    <button className='text-xl tracking-wider' onClick={toggle}>{isOpen ? "CLOSE" : "MENU"}</button>
+                </section>
+                <SideMenu open={isOpen} onCancel={() => setIsOpen(false)} />
             </header>
-            <SideMenu open={isOpen} onCancel={() => setIsOpen(false)} />
         </>
     );
 };
