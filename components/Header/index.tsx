@@ -9,11 +9,10 @@ export default function Header() {
     const toggle = () => setIsOpen((prev) => !prev);
     return (
         <>
-            <header className=''>
-                <h1>HEADER GSAP</h1>
-                <button onClick={toggle}>{isOpen ? "CLOSE" : "MENU"}</button>
+            <header className='w-full h-24 flex justify-between items-center px-8 mb-8'>
+                <h1 className='text-2xl tracking-wider'>HEADER</h1>
+                <button className='text-xl tracking-wider' onClick={toggle}>{isOpen ? "CLOSE" : "MENU"}</button>
             </header>
-
             <SideMenu open={isOpen} onCancel={() => setIsOpen(false)} />
         </>
     );

@@ -1,6 +1,9 @@
 export default function Home() {
   return (
-    <section className="w-[1024px] ">
+    <section className="w-[1024px] mx-auto px-8 mb-8">
+
+      <h2>CONTENT TITLE</h2>
+
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel arcu eu purus vehicula lacinia. Nulla facilisi. Suspendisse potenti. In hac habitasse platea dictumst. Vivamus sed quam et libero scelerisque tincidunt.</p>
 
       <p>Curabitur eleifend dolor a nisl aliquam, a dignissim leo convallis. Aliquam erat volutpat. Integer a erat at nisi tempus varius. Sed bibendum, sapien a laoreet consequat, risus neque tincidunt est, sed aliquam libero dui id risus.</p>

@@ -10,9 +10,10 @@ type Props = {
 
 export default function SideMenu({onCancel, open}:Props) {
     return open ?(
-        <>
-            <div className=''>
-                <p className={styles.listLogo}>LOGO.</p>
+        <div className='w-full flex justify-center mb-8 bg-gray-200'>
+            <div className='w-80'>
+                {/* <Image /> */}
+                <p className='text-2xl italic font-bold text-center tracking-wider pb-4'>LOGO MARK</p>
                 <ul>
                     <li className={styles.listStyle}><Link href="/">01. HOME</Link></li>
                     <li className={styles.listStyle}><Link href="/">02. NEWS</Link></li>
@@ -21,6 +22,6 @@ export default function SideMenu({onCancel, open}:Props) {
                     <li className={styles.listStyle}><Link href="/">05. LOGIN</Link></li>
                 </ul>
             </div>
-        </>
+        </div>
     ):(<></>);
 };
