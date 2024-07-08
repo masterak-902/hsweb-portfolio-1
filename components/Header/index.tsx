@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import SideMenu from '../SideMenu';
+import SideMenu from '../HeaderMenu';
 
 
 export default function Header() {
