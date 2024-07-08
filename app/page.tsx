@@ -1,7 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
+import "./page.css"
 import gsap from 'gsap';
+import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     <section className="w-[1024px] mx-auto mt-32 px-8 mb-8">
       <main className="grid gap-8" ref={container}>
 
-        <h2 className="text-xl">CONTENT TITLE</h2>
+        <h2 className="text-2xl">CONTENT TITLE</h2>
 
         <p className="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel arcu eu purus vehicula lacinia. Nulla facilisi. Suspendisse potenti. In hac habitasse platea dictumst. Vivamus sed quam et libero scelerisque tincidunt.</p>
 
