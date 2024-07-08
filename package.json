@@ -11,16 +11,20 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
     "@gsap/react": "^2.1.1",
     "gsap": "^3.12.5",
+    "negotiator": "^0.6.3",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@types/jest": "^29.5.12",
+    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

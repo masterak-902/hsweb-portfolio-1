@@ -15,7 +15,7 @@ export default function SideMenu({onCancel, open}:Props) {
                 <div className='w-80'>
                     <ul>
                         <li className={styles.listStyle}><Link href="/">01. HOME</Link></li>
-                        <li className={styles.listStyle}><Link href="/">02. NEWS</Link></li>
+                        <li className={styles.listStyle}><Link href="/about">02. ABOUT</Link></li>
                         <li className={styles.listStyle}><Link href="/">03. COMPANY</Link></li>
                         <li className={styles.listStyle}><Link href="/">04. RECRUIT</Link></li>
                         <li className={styles.listStyle}><Link href="/">05. LOGIN</Link></li>
