@@ -11,8 +11,8 @@ export default function Home() {
 
   useGSAP( () => {
       const boxes: HTMLElement[] = gsap.utils.toArray('.box');
-      gsap.set(boxes, { y: 15, autoAlpha: 0 });
-      gsap.to(boxes, { y: 0, autoAlpha: 1, stagger: 0.1, duration: 1.5, ease: "expoScale(0.5,7,none)"});
+      gsap.set(boxes, { y: 30, autoAlpha: 0 });
+      gsap.to(boxes, { y: 0, autoAlpha: 1, stagger: 0.1, duration: 1.5, ease: "power1.in",});
     }, { scope: container } 
   );
 
