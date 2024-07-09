@@ -1,17 +1,20 @@
+import { getDictionary } from "../../get-dictionary";
+import { Locale } from "../../i18n-config";
 import LocaleSwitcher from "@/components/Locale-Switcher";
-import { getDictionary } from "@/get-dictionary";
-import { Locale } from "@/i18n-config";
 
-export default async function IndexPage({ params: { lang } }:{ params: { lang: Locale }; }){
-    // Any型を要修正
-    const dictionary: { [key: string]: any } = await getDictionary(lang);
-    return (
-        <section className="w-[1024px] mx-auto mt-32 px-8 mb-8">
-            <div>
-                <LocaleSwitcher />
-                <p>Current locale: {lang}</p>
-                <p>This text is rendered on the server:{dictionary["server-component"].welcome}</p>
-            </div>
-        </section>
-    );
+export default async function Home( { params: { lang } }:{ params: { lang: Locale } }) {
+  const dictionary = await getDictionary(lang);
+
+  return (
+    <section className="w-[1024px] mx-auto mt-32 px-8 mb-8">
+    <div>
+      <LocaleSwitcher />
+      <p>Current locale: {lang}</p>
+      <p>Welcome Message: {dictionary["server-component"]?.a}</p>
+      <p>Text: {dictionary["server-component"]?.b}</p>
+      <p>language: {dictionary["server-component"]?.c}</p>
+      <p>Rust language Document page: {dictionary["server-component"]?.d}</p>
+    </div>
+  </section>
+  );
 }

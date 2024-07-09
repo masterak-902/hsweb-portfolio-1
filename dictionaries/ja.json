@@ -1,5 +1,9 @@
 {
     "server-component": {
-      "welcome": "ようこそ"
+      "a": "ようこそ",
+      "b": "これは言語表示をテストしています。",
+      "c": "日本語",
+      "d": "https://doc.rust-jp.rs/book-ja/",
+      "e": 11
     }
   }

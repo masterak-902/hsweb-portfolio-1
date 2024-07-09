@@ -1,5 +1,8 @@
 {
     "server-component": {
-      "welcome": "Welcome"
+      "a": "Welcome",
+      "b": "This tests the language display.",
+      "c": "English",
+      "d": "https://doc.rust-lang.org/stable/book/"
     }
   }
