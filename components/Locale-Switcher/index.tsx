@@ -1,39 +1,39 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { i18n, type Locale } from "@/i18n-config";
+import { useState, useEffect } from "react";
+import styles from "./index.module.css";
 
 export default function LocaleSwitcher() {
   const pathName = usePathname();
-  const redirectedPathName = (locale: Locale) => {
-    if (!pathName) return "/";
-    const segments = pathName.split("/");
-    segments[1] = locale;
-    return segments.join("/");
+  const router = useRouter();
+  const [currentLocale, setCurrentLocale] = useState<Locale>("ja");
+
+  useEffect(() => {
+    const segments = pathName?.split("/");
+    if (segments && i18n.locales.includes(segments[1] as Locale)) {
+      setCurrentLocale(segments[1] as Locale);
+    }
+  }, [pathName]);
+
+  const toggleLocale = () => {
+    const newLocale: Locale = currentLocale === "en" ? "ja" : "en";
+    const redirectedPathName = (locale: Locale) => {
+      if (!pathName) return "/";
+      const segments = pathName.split("/");
+      segments[1] = locale;
+      return segments.join("/");
+    };
+    router.push(redirectedPathName(newLocale));
+    setCurrentLocale(newLocale);
   };
 
-  return(
-    <form>
-    <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-      <option ><li><Link href={redirectedPathName("ja")}>Japanese</Link></li></option>
-      <option ><Link href={redirectedPathName("en")}>English</Link></option>
-    </select>
-    </form>
+  return (
+    <div>
+      <button className={`${styles.switcher} ${styles.active}`} onClick={toggleLocale}>
+        {currentLocale === "ja" ? "English" : "日本語"}
+      </button>
+    </div>
   );
-
-  // return (
-  //   <div>
-  //     
-  //     <ul>
-  //       {i18n.locales.map((locale) => {
-  //         return (
-  //           <li key={locale}>
-  //             <Link href={redirectedPathName(locale)}>{locale}</Link>
-  //           </li>
-  //         );
-  //       })}
-  //     </ul>
-  //   </div>
-  // );
 }
