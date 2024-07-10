@@ -1,8 +1,14 @@
 {
-    "server-component": {
-      "a": "Welcome",
-      "b": "This tests the language display.",
-      "c": "English",
-      "d": "https://doc.rust-lang.org/stable/book/"
-    }
+  "server-component": {
+    "a": "Welcome to the new server component interface. This area allows you to manage and monitor all your server activities.",
+    "b": "The quick brown fox jumps over the lazy dog. This sentence contains every letter in the English alphabet.",
+    "c": "Ensuring that every user has a seamless and efficient experience is our top priority. We continuously strive for excellence.",
+    "d": "This is a test sentence designed to verify language display. It is important for multilingual applications to be accurate.",
+    "e": "The advancement of technology has significantly impacted our daily lives, providing convenience and efficiency in various tasks.",
+    "f": "Learning a new language can be challenging but also incredibly rewarding. It opens up new opportunities and perspectives.",
+    "g": "Effective communication is key to success in any field. Clear and concise messaging ensures that your audience understands your point.",
+    "h": "In today's globalized world, being multilingual is an invaluable skill. It enhances personal and professional growth.",
+    "i": "Reading books is a great way to gain knowledge and relax. It stimulates the mind and enhances creativity.",
+    "j": "Staying updated with current events helps us make informed decisions. It is essential to be aware of what is happening around us."
   }
+}

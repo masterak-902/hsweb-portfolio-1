@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import SideMenu from '../HeaderMenu';
+import LocaleSwitcher from "@/components/Locale-Switcher";
 
 
 export default function Header() {
@@ -13,6 +14,7 @@ export default function Header() {
                 <section className='w-full h-24 flex justify-between items-center px-16'>
                     <h1 className='text-2xl tracking-wider'>HEADER</h1>
                     <p className='text-xl italic'>This page is not responsive.</p>
+                    <LocaleSwitcher />
                     <button className='text-xl tracking-wider' onClick={toggle}>{isOpen ? "CLOSE" : "MENU"}</button>
                 </section>
                 <SideMenu open={isOpen} onCancel={() => setIsOpen(false)} />

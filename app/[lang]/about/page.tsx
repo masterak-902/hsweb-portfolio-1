@@ -43,7 +43,6 @@ export default function Home() {
         <p className="box">Phasellus hendrerit quam at dui vestibulum, at scelerisque nulla facilisis. Duis aliquam arcu et orci varius, non laoreet ex finibus. Quisque ut libero non lacus dictum malesuada a ac magna.</p>
         
       </main>
-      
     </section>
   );
 }
