@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import styles from './index.module.css';
 
 type Props = {
     open: boolean;
@@ -12,13 +11,11 @@ export default function SideMenu({onCancel, open}:Props) {
     return open ?(
         <>
             <div className='w-full flex justify-center py-8 bg-white'>
-                <div className='w-80'>
+                <div className='w-50'>
                     <ul>
-                        <li className={styles.listStyle}><Link href="/">01. HOME</Link></li>
-                        <li className={styles.listStyle}><Link href="/about">02. ABOUT</Link></li>
-                        <li className={styles.listStyle}><Link href="/">03. COMPANY</Link></li>
-                        <li className={styles.listStyle}><Link href="/">04. RECRUIT</Link></li>
-                        <li className={styles.listStyle}><Link href="/">05. LOGIN</Link></li>
+                        <Link href="/"><li className="custom-menu">01. HOME</li></Link>
+                        <Link href="/about"><li className="custom-menu">02. ABOUT</li></Link>
+                        <Link href="/gallery"><li className="custom-menu">03. GALLERY</li></Link>
                     </ul>
                     {/* <Image /> */}
                     <p className='text-2xl italic font-bold text-center tracking-wider mt-8'>LOGO MARK</p>

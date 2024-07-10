@@ -12,7 +12,14 @@ body {
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
-    min-height: 100vh;
+min-height: 100vh;
     background-color: #f7f7f7;
 }
 
+.custom-text{
+    @apply mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48;
+}
+
+.custom-menu {
+    @apply font-bold text-xl tracking-widest px-4 py-2 hover:text-white hover:bg-gray-800;
+}

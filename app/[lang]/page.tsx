@@ -5,18 +5,19 @@ export default async function Home( { params: { lang } }:{ params: { lang: Local
   const dictionary = await getDictionary(lang);
 
   return (
-    <section className="w-[1024px] mx-auto mt-32 px-8 mb-8">
+    <section className="max-w-7xl mx-auto mt-32 px-8 mb-8">
       <div>
-        <p>{dictionary["server-component"]?.a}</p>
-        <p>{dictionary["server-component"]?.b}</p>
-        <p>{dictionary["server-component"]?.c}</p>
-        <p>{dictionary["server-component"]?.d}</p>
-        <p>{dictionary["server-component"]?.e}</p>
-        <p>{dictionary["server-component"]?.f}</p>
-        <p>{dictionary["server-component"]?.g}</p>
-        <p>{dictionary["server-component"]?.h}</p>
-        <p>{dictionary["server-component"]?.i}</p>
-        <p>{dictionary["server-component"]?.j}</p>
+        <h2 className="mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-center">This is the main page.</h2>
+        <p className="custom-text">{dictionary["server-component"]?.a}</p>
+        <p className="custom-text">{dictionary["server-component"]?.b}</p>
+        <p className="custom-text">{dictionary["server-component"]?.c}</p>
+        <p className="custom-text">{dictionary["server-component"]?.d}</p>
+        <p className="custom-text">{dictionary["server-component"]?.e}</p>
+        <p className="custom-text">{dictionary["server-component"]?.f}</p>
+        <p className="custom-text">{dictionary["server-component"]?.g}</p>
+        <p className="custom-text">{dictionary["server-component"]?.h}</p>
+        <p className="custom-text">{dictionary["server-component"]?.i}</p>
+        <p className="custom-text">{dictionary["server-component"]?.j}</p>
       </div>
     </section>
   );
