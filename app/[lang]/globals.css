@@ -11,8 +11,8 @@ body {
     padding: 0;
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
-min-height: 100vh;
+    /* grid-template-columns: 100%; */
+    min-height: 100vh;
     background-color: #f7f7f7;
 }
 
